@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+    <title>Your Video Catalog</title>
+</head>
+<style>
+table, th, td {
+    border: 1px solid brown;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+<body>
+  <a href="/upload/">Upload New Video</a>
+  <hr align="left" width="70%">
+  <table style="width:70%">
+      <caption>Uploaded Video Files</caption>
+      <tr>
+      <th>Video File</th>
+      <th>Uploaded At</th>
+      </tr>
+        {% for item in upload %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.uploaded_date }}</td>
+        </tr>
+        {% endfor %}
+  </table>
+  <hr align="left" width="70%">
+  <table style="width:70%">
+    <ul>
+        <p><strong>Converted Video Files</strong></p>
+        {% for item in download %}
+        <li><a href="/download/{{ item.name }}">{{  item.name }}</a></li> 
+        {% endfor %}
+    </ul>
+<script type="text/javascript">
+  setTimeout(function(){
+    location = ''
+  },10000)
+</script>
+</body>
+</html>

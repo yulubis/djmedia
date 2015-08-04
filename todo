@@ -1,0 +1,11 @@
+Add:
+
+1) system
+- logging
+- subprocess.Popen
+2) parameters
+- fields validation
+- presets 
+- FFmpeg Utilities
+3) frontend
+- thumbnails 
